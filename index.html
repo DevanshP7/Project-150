@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Train</title>
+        <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene backgroundcolor="aliceblue">
+            <a-assets>
+                <img id="grass" src="grass.jpg">
+                <img id="crossing" src="crossing.jpg">
+                <a-asset-item id="mtl" src="obj.mtl"></a-asset-item>
+                <a-asset-item id="obj" src="tinker.obj"></a-asset-item>
+            </a-assets>
+            <a-sky color="aliceblue"></a-sky>
+            <a-plane height="10" width="20" rotation="-90 0 0" position="0 0 -8" src="#grass"></a-plane>
+            <a-plane height="10" width="20" rotation="0 0 0" position="0 5 -10" src="#crossing"></a-plane>
+            <a-entity position="0 0 -5" rotation="-90 0 0" scale="0.03 0.03 0.03" obj-model="obj:#obj;mtl:#mtl"></a-entity>
+        </a-scene>
+    </body>
+</html>
